@@ -20,7 +20,9 @@ public class TimSach {
             String id=rs.getString("id");
             String ten_sach=rs.getString("ten_sach");
             String tac_gia=rs.getString("tac_gia");
-            System.out.println(id+" "+ten_sach+" "+tac_gia);
+            Integer  so_luong=rs.getInt("so_luong");
+            if(so_luong>0)
+                System.out.println(id+" "+ten_sach+" "+tac_gia);
         }
         if(!check) System.out.println("Khong tim thay sach");
     }

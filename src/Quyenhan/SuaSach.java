@@ -6,18 +6,20 @@ public class SuaSach {
     static String URL="jdbc:sqlite:identifier.sqlite";
     public static void thuchien() throws SQLException {
         Connection conn=DriverManager.getConnection(URL);
-        String sql="UPDATE Sach SET ten_sach=?,tac_gia=?,ngay_sua=datetime('now','localtime') WHERE id=?";
+        String sql="UPDATE Sach SET ten_sach=?,tac_gia=?,so_luong=? WHERE id=?";
         PreparedStatement pst=conn.prepareStatement(sql);
         Scanner sc=new Scanner(System.in);
 
         String id=sc.nextLine();
         String ten_sach=sc.nextLine();
         String tac_gia=sc.nextLine();
+        Integer so_luong=sc.nextInt();
         pst.setString(1,ten_sach);
         pst.setString(2,tac_gia);
         pst.setString(3,id);
+        pst.setInt(4,so_luong);
 
-        int check=pst.executeUpdate();
+        pst.executeUpdate();
         conn.close();
     }
 

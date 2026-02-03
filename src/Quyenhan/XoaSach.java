@@ -13,7 +13,7 @@ public class XoaSach {
         String id=sc.nextLine();
 
         pst.setString(1, id);
-        int check=pst.executeUpdate();
+        pst.executeUpdate();
 
         conn.close();
     }

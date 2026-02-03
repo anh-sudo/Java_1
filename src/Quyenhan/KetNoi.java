@@ -12,9 +12,9 @@ public class KetNoi {
             String id = rs.getString("id");
             String ten_sach = rs.getString("ten_sach");
             String tac_gia = rs.getString("tac_gia");
-            String ngay_sua = rs.getString("ngay_sua");
+            Integer so_luong = rs.getInt("so_luong");
 
-            System.out.println(id+" "+ten_sach+" "+tac_gia+" "+ngay_sua);
+            System.out.println(id+" | "+ten_sach+" | "+tac_gia+" | "+so_luong);
         }
         conn.close();
     }
