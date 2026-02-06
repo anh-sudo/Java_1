@@ -3,6 +3,7 @@ package Quyenhan;
 import java.sql.*;
 import java.util.Scanner;
 public class DangNhap {
+    public static String p_user;
     static String URL="jdbc:sqlite:identifier.sqlite";
     public static String thuchien() throws  SQLException {
         Scanner sc=new Scanner(System.in);
@@ -21,6 +22,7 @@ public class DangNhap {
         ResultSet rs=pst.executeQuery();
         if(rs.next()){
             String chucvu=rs.getString("role");
+            p_user=username;
             conn.close();
             return chucvu;
         }
