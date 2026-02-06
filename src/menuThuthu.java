@@ -9,11 +9,12 @@ public class menuThuthu {
 
         while (true) {
             System.out.println("\n=== MENU CHÍNH ===");
-            System.out.println("1. Xem");
-            System.out.println("2. Thêm");
-            System.out.println("3. Xóa");
-            System.out.println("4. Sửa");
-            System.out.println("5. Tim sach");
+            System.out.println("1. Xem sách");
+            System.out.println("2. Thêm sách");
+            System.out.println("3. Xóa sách");
+            System.out.println("4. Sửa sách");
+            System.out.println("5. Tìm sách");
+            System.out.println("6. Xem phiếu mượn");
             System.out.print("Chọn: ");
             int chon = sc.nextInt();
 
@@ -33,7 +34,10 @@ public class menuThuthu {
                 case 5:
                     TimSach.thuchien();
                     break;
-                case 6: System.exit(0);
+                case 6:
+                    XemTatCaPhieu.thuchien();
+                    break;
+                case 7: System.exit(0);
             }
         }
     }
